@@ -31,19 +31,14 @@ gameBoard.renderArray();
 
 const gameStateObject = {
   gameState: 0,
+  playerMessage: document.querySelector('.player-message'),
   displayWinner: function () {
-    let winningMessage = document.querySelector('.win-message').textContent;
-
     if (gameStateObject.gameState === 0) {
       this.gameState = -1;
-      winningMessage = `${winningMessage} X wins`;
-      document.querySelector('.win-message').textContent = winningMessage;
-      document.getElementById('winning').classList.toggle('hide');
+      this.playerMessage.textContent = `Player X wins`;
     } else {
       gameStateObject.gameState = -1;
-      winningMessage = `${winningMessage} O wins`;
-      document.querySelector('.win-message').textContent = winningMessage;
-      document.getElementById('winning').classList.toggle('hide');
+      this.playerMessage.textContent = `Player X wins`;
     }
   },
 
@@ -114,23 +109,28 @@ const squares = document.querySelectorAll('.squares');
 squares.forEach((square) => {
   square.addEventListener('click', function (e) {
     const target = e.target;
-    const targetId = e.target.id;
-    console.log(e.target.id);
+    const targetIdNumber = target.id.match(/\d+/)[0];
 
     // overwrite the board array
 
     if (target.textContent == false && gameStateObject.gameState >= 0) {
       if (gameStateObject.gameState === 0) {
-        gameBoard.arrayBoard[targetId] = 'x';
+        gameBoard.arrayBoard[targetIdNumber] = 'x';
         gameBoard.renderArray();
         gameStateObject.checkWinner();
-        if (gameStateObject.gameState !== -1) gameStateObject.gameState++;
+        if (gameStateObject.gameState !== -1) {
+          gameStateObject.gameState++;
+          gameStateObject.playerMessage.textContent = 'Player O turn';
+        }
       } else {
         // target.textContent = "o";
-        gameBoard.arrayBoard[targetId] = 'o';
+        gameBoard.arrayBoard[targetIdNumber] = 'o';
         gameBoard.renderArray();
         gameStateObject.checkWinner();
-        if (gameStateObject.gameState !== -1) gameStateObject.gameState--;
+        if (gameStateObject.gameState !== -1) {
+          gameStateObject.gameState--;
+          gameStateObject.playerMessage.textContent = 'Player X turn';
+        }
       }
     }
   });

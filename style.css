@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   background-color: #222831;
@@ -20,13 +20,13 @@ header {
   color: #eeeeee;
 }
 
-.hide {
+/* .hide {
   display: none;
-}
+} */
 #winning {
   text-align: center;
 }
-.win-message {
+.player-message {
   font-size: 3rem;
   color: #eeeeee;
 }
@@ -63,6 +63,34 @@ header {
   font-size: 8rem;
 }
 
+#id0 {
+  border-top: none;
+  border-left: none;
+}
+#id1 {
+  border-top: none;
+}
+#id2 {
+  border-right: none;
+}
+#id3 {
+  border-left: none;
+}
+
+#id5 {
+  border-right: none;
+}
+#id6 {
+  border-bottom: none;
+  border-left: none;
+}
+#id7 {
+  border-bottom: none;
+}
+#id8 {
+  border-bottom: none;
+  border-right: none;
+}
 footer {
   text-align: center;
 }
