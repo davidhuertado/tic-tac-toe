@@ -38,6 +38,7 @@ header {
   border: 2px solid #fff;
   background-color: #fff;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .grid-section {
@@ -57,13 +58,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #fff;
   border: 3px solid #00adb5;
   color: #393e46;
   font-size: 8rem;
 }
 
-#id0 {
+/* #id0 {
   border-top: none;
   border-left: none;
 }
@@ -72,6 +73,7 @@ header {
 }
 #id2 {
   border-right: none;
+  border-top: none;
 }
 #id3 {
   border-left: none;
@@ -89,8 +91,8 @@ header {
 }
 #id8 {
   border-bottom: none;
-  border-right: none;
-}
+  border-right: none; */
+/* } */
 footer {
   text-align: center;
 }
