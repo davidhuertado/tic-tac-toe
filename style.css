@@ -20,9 +20,6 @@ header {
   color: #eeeeee;
 }
 
-/* .hide {
-  display: none;
-} */
 #winning {
   text-align: center;
 }
@@ -64,16 +61,6 @@ header {
   font-size: 8rem;
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 300px;
-  }
-  .squares {
-    width: 99px;
-    height: 99px;
-  }
-}
-
 footer {
   text-align: center;
 }
@@ -81,4 +68,15 @@ footer {
   font-size: 1.5rem;
   font-weight: 500;
   color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 300px;
+  }
+  .squares {
+    width: 99px;
+    height: 99px;
+    font-size: 4rem;
+  }
 }
