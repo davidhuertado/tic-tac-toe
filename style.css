@@ -64,35 +64,16 @@ header {
   font-size: 8rem;
 }
 
-/* #id0 {
-  border-top: none;
-  border-left: none;
-}
-#id1 {
-  border-top: none;
-}
-#id2 {
-  border-right: none;
-  border-top: none;
-}
-#id3 {
-  border-left: none;
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 300px;
+  }
+  .squares {
+    width: 99px;
+    height: 99px;
+  }
 }
 
-#id5 {
-  border-right: none;
-}
-#id6 {
-  border-bottom: none;
-  border-left: none;
-}
-#id7 {
-  border-bottom: none;
-}
-#id8 {
-  border-bottom: none;
-  border-right: none; */
-/* } */
 footer {
   text-align: center;
 }
