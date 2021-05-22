@@ -71,8 +71,18 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  header {
+    margin: 1rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .player-message {
+    font-size: 2rem;
+  }
   .container {
     width: 300px;
+    margin: 2rem;
   }
   .squares {
     width: 99px;
